@@ -1,5 +1,6 @@
 def pages():
     return [
+        # {'name': 'error-page-name', 'uri': '/error'},
         {'name': 'index', 'uri': '/'},
         {'name': 'az-index', 'uri': '/az'},
         {'name': 'en-index', 'uri': '/en'},
