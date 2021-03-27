@@ -1,0 +1,23 @@
+def pages():
+    return [
+        {'name': 'index', 'uri': '/'},
+        {'name': 'az-index', 'uri': '/az'},
+        {'name': 'en-index', 'uri': '/en'},
+        {'name': 'ru-index', 'uri': '/ru'},
+        {'name': 'images-page', 'uri': '/contents/image'},
+        {'name': 'az-images-page', 'uri': '/az/contents/image'},
+        {'name': 'en-images-page', 'uri': '/en/contents/image'},
+        {'name': 'ru-image-page', 'uri': '/ru/contents/image'},
+        {'name': 'audio-page', 'uri': '/contents/audio'},
+        {'name': 'az-audio-page', 'uri': '/az/contents/audio'},
+        {'name': 'en-audio-page', 'uri': '/en/contents/audio'},
+        {'name': 'ru-audio-page', 'uri': '/ru/contents/audio'},
+        {'name': 'video-page', 'uri': '/contents/video'},
+        {'name': 'az-video-page', 'uri': '/az/contents/video'},
+        {'name': 'en-video-page', 'uri': '/en/contents/video'},
+        {'name': 'ru-video-page', 'uri': '/ru/contents/video'},
+        {'name': 'document-page', 'uri': '/contents/document'},
+        {'name': 'az-document-page', 'uri': '/az/contents/document'},
+        {'name': 'en-document-page', 'uri': '/en/contents/document'},
+        {'name': 'ru-document-page', 'uri': '/ru/contents/document'},
+    ]
