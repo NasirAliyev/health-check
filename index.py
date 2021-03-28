@@ -1,16 +1,17 @@
+from dotenv import load_dotenv
 import requests
 
+from configs import BASE_URL, ALARM_URL
 from pages import pages
 from payload import payload
 
+load_dotenv()
+
 
 def check():
-    alarm_url = 'https://events.pagerduty.com/x-ere/R018WTC0ITJUVR7I1OQQAHWKJ1ISX6X8'
-    base_url = 'https://azerbaijan-is.com'
-
     for page in pages():
         try:
-            url = base_url + page['uri']
+            url = BASE_URL + page['uri']
             data = requests.get(url)
             status_code = data.status_code
 
@@ -18,7 +19,8 @@ def check():
                 msg = '`{}` page is OK'.format(page['name'])
             else:
                 level = get_error_level(status_code)
-                requests.post(alarm_url, json=payload(url=url, page=page['name'], status_code=status_code, level=level))
+                json = payload(url=url, page=page['name'], status_code=status_code, level=level)
+                requests.post(ALARM_URL, json=json)
                 msg = '`{}` page is down. Status code: {}'.format(page['name'], status_code)
 
             print(msg)
